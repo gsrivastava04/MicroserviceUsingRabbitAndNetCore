@@ -1,7 +1,10 @@
+using MediatR;
 using MicroRabbit.Banking.Application.Interfaces;
 using MicroRabbit.Banking.Application.Services;
 using MicroRabbit.Banking.Data.Context;
 using MicroRabbit.Banking.Data.Repository;
+using MicroRabbit.Banking.Domain.CommandHandlers;
+using MicroRabbit.Banking.Domain.Commands;
 using MicroRabbit.Banking.Domain.Interfaces;
 using MicroRabbit.Domain.Core.Bus;
 using MicroRabbit.Infra.IoC;
@@ -12,10 +15,12 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllers();
-//builder.Services.AddTransient<IEventBus, RabbitMQBus>();
+builder.Services.AddMediatR(typeof(Program));
+builder.Services.AddTransient<IEventBus, RabbitMQBus>();
 builder.Services.AddTransient<IAccountService, AccountService>(); ;
 builder.Services.AddTransient<IAccountRepository, AccountRepository>();
 builder.Services.AddTransient<BankingDbContext>();
+builder.Services.AddTransient<IRequestHandler<CreateTransferCommand, bool>, TransferCommandHandler>();
 
 var connectionString = builder.Configuration.GetConnectionString("BankingDbConnection");
 builder.Services.AddDbContext<BankingDbContext>(x => x.UseSqlServer(connectionString));
