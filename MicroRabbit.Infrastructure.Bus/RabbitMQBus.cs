@@ -55,7 +55,7 @@ namespace MicroRabbit.Infrastructure.Bus
             if(!_eventTypes.Contains(typeof(T)))
                 _eventTypes.Add(typeof(T));
 
-            if (_handlers.ContainsKey(eventName))
+            if (!_handlers.ContainsKey(eventName))
                 _handlers.Add(eventName, new List<Type>());
 
             if (_handlers[eventName].Any(s => s.GetType() == handlerType))
