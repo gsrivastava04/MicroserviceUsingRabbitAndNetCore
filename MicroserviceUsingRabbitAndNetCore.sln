@@ -47,13 +47,18 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{F989228C-D
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{21004119-BE88-441D-B6E0-F57A81972390}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroRabbit.Transfer.API", "MicroRabbit.Transfer.API\MicroRabbit.Transfer.API.csproj", "{37DAE164-7334-47C1-BAE8-DD3A089D6316}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroRabbit.Transfer.API", "MicroRabbit.Transfer.API\MicroRabbit.Transfer.API.csproj", "{37DAE164-7334-47C1-BAE8-DD3A089D6316}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroRabbit.Transfer.Application", "MicroRabbit.Transfer.Application\MicroRabbit.Transfer.Application.csproj", "{D90E66F6-9702-4C36-86C8-5CC87207D1B2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroRabbit.Transfer.Application", "MicroRabbit.Transfer.Application\MicroRabbit.Transfer.Application.csproj", "{D90E66F6-9702-4C36-86C8-5CC87207D1B2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroRabbit.Tranfer.Data", "MicroRabbit.Tranfer.Data\MicroRabbit.Tranfer.Data.csproj", "{6D77D125-BA48-4113-A8C0-2FF37C005344}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroRabbit.Tranfer.Data", "MicroRabbit.Tranfer.Data\MicroRabbit.Tranfer.Data.csproj", "{6D77D125-BA48-4113-A8C0-2FF37C005344}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroRabbit.Transfer.Domain", "MicroRabbit.Transfer.Domain\MicroRabbit.Transfer.Domain.csproj", "{DCC538C8-0DD1-4495-BDE2-C46FF48B10F1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroRabbit.Transfer.Domain", "MicroRabbit.Transfer.Domain\MicroRabbit.Transfer.Domain.csproj", "{DCC538C8-0DD1-4495-BDE2-C46FF48B10F1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Models", "Models", "{FBEB9606-BE85-4EB0-AC72-BA6F79934B12}"
+	ProjectSection(SolutionItems) = preProject
+		TransferLog.cs = TransferLog.cs
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -131,6 +136,7 @@ Global
 		{D90E66F6-9702-4C36-86C8-5CC87207D1B2} = {F4675ABA-6159-4C40-B255-DB205153D67D}
 		{6D77D125-BA48-4113-A8C0-2FF37C005344} = {F989228C-D141-46C5-9A21-BA93CADEF52C}
 		{DCC538C8-0DD1-4495-BDE2-C46FF48B10F1} = {21004119-BE88-441D-B6E0-F57A81972390}
+		{FBEB9606-BE85-4EB0-AC72-BA6F79934B12} = {73898642-9457-4E4E-92F2-FB822D24D7EF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F3B13992-4943-4A1B-BB06-CED18B324B36}
